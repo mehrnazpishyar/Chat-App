@@ -4,7 +4,7 @@ import Homepage from './pages/Homepage'
 
 const App = () => {
   return (
-    <div className="bg-[url('./src/assets/chat.svg')] bg-contain">
+    <div className="bg-[#01062f] bg-contain">
       <Routes>
         <Route path="/" element={<Homepage/>} />
       </Routes>
