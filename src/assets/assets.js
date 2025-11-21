@@ -10,6 +10,8 @@ import profile_david from "./profile_david.jpg"
 import avatarIcon from "./avatarIcon.png"
 import arrowIcon from "./arrowIcon.png"
 import helpIcon from "./helpIcon.png"
+import galleryIcon from "./galleryIcon.svg"
+import sendButton from "./sendButton.svg"
 import img1 from './img1.jpg'
 import img2 from './img2.jpg'
 
@@ -28,7 +30,9 @@ const assets = {
     arrowIcon,
     helpIcon,
     img1,
-    img2
+    img2,
+    galleryIcon,
+    sendButton
 
 }
 
