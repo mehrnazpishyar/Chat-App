@@ -14,6 +14,12 @@ import galleryIcon from "./galleryIcon.svg"
 import sendButton from "./sendButton.svg"
 import img1 from './img1.jpg'
 import img2 from './img2.jpg'
+import pic1 from './pic1.jpg'
+import pic2 from './pic2.jpg'
+import pic3 from './pic3.jpg'
+import pic4 from './pic4.jpg'
+import pic5 from './pic5.jpg'
+import pic6 from './pic6.jpg'
 
 
 const assets = {
@@ -32,11 +38,18 @@ const assets = {
     img1,
     img2,
     galleryIcon,
-    sendButton
+    sendButton,
+    pic1,
+    pic2,
+    pic3,
+    pic4,
+    pic5,
+    pic6
 
 }
 
 export default assets;
+export const imagesData = [pic1, pic2, pic3, pic4, pic1, pic2]
 
 export const userData = [
     {
