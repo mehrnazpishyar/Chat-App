@@ -21,7 +21,7 @@ const Login = () => {
     <div className="min-h-screen bg-cover bg-center flex items-center justify-center gap-8 max-sm:flex-col backdrop-blur-2xl">
       <form
         onSubmit={onSubmitHandler}
-        className="border-2 bg-white/8 text-white border-gray-500 p-6 flex flex-col gap-6 rounded-lg shadow-lg"
+        className="border-2 bg-white/8 text-white border-gray-500 p-6 flex flex-col gap-6 rounded-lg shadow-lg h-[450px] sm:h-auto"
       >
         <h2 className="font-medium text-2xl flex justify-between items-center">
           {currentState}
@@ -41,9 +41,13 @@ const Login = () => {
             type="text"
             name=""
             id=""
-            className="p-2 border border-gray-500 rounded-md focus:outline-none"
+            className={`p-2 border border-gray-500 rounded-md focus:outline-none ${
+              currentState === "Login" || isSubmitted
+                ? "opacity-0 h-0 p-0 m-0 border-none"
+                : ""
+            }`}
             placeholder="Full Name"
-            required
+            required={currentState === "Sign Up" && !isSubmitted}
           />
         )}
         {!isSubmitted && (
@@ -73,15 +77,15 @@ const Login = () => {
           {currentState === "Sign Up" ? "create Account" : "Login Now"}
         </button>
 
-        {currentState === "Sign Up" ? (
-          <div className="flex items-center gap-2 text-sm text-gray-500">
-            <input type="checkbox" required />
+          <div
+            className={`flex items-center gap-2 text-sm text-gray-500 transition-all duration-300 ${
+              currentState !== "Sign Up" ? "opacity-0 h-0 overflow-hidden" : ""
+            }`}
+          >
+            <input type="checkbox" required={currentState === "Sign Up"} />
             <p>Agree to the terms of use & privacy policy.</p>
           </div>
-        ) : (
-          ""
-        )}
-
+      
         <div className="flex flex-col gap-2">
           {currentState === "Sign Up" ? (
             <p className="flex items-center gap-2 justify-center text-sm text-gray-600">
